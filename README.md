@@ -1,4 +1,4 @@
-# runescsape-calculator
+# vue-runescape-calculator
 
 ## Project setup
 ```

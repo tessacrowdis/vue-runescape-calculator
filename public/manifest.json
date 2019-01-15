@@ -1,6 +1,6 @@
 {
-  "name": "runescsape-calculator",
-  "short_name": "runescsape-calculator",
+  "name": "vue-runescape-calculator",
+  "short_name": "vue-runescape-calculator",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
