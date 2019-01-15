@@ -2,7 +2,7 @@
 	<div class="header">
 		<div v-for="skill in skills">
 			<div v-on:click="changeActiveCategory(skill.name)">
-				<img :src="skill.src">
+				<img :src="require(`@/assets/${skill.src}`)">
 				<h2 v-if="skill.name === activeCategory">{{ skill.name }}</h2>
 				<h4 v-else>{{ skill.name }}</h4>
 			</div>

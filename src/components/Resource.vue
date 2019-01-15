@@ -4,6 +4,7 @@
     <td>
       <img :src="resource.src">
       {{resource.name}}
+      <img v-if="resource.members" src="../assets/members_star.gif">
     </td>
     <td>{{resource.experience}}</td>
     <td>
