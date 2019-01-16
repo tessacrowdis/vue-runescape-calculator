@@ -136,7 +136,7 @@ export default [
         resources: []
     },
     {
-        name: "Smiting",
+        name: "Smithing",
         src: "skill_icons/smithing.png",
         resources: []
     },
