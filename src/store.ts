@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import categories from './categories';
 import leveltable from './leveltable';
+import skillcolors from './skillcolors';
 
 Vue.use(Vuex);
 
@@ -24,6 +25,7 @@ export default new Vuex.Store({
             { name: 'Smithing', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 },
             { name: 'Woodcutting', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 }
         ],
+        skillcolors,
         categories,
         leveltable
     },
