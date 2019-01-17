@@ -38,12 +38,14 @@
           type="number"
         >
       </div>
+      <button v-on:click="callApi">Click for Stats on "The Botch"</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+const { constants, hiscores } = require("osrs-api");
 import "@/styles.scss";
 
 @Component
@@ -58,6 +60,15 @@ export default class Calculator extends Vue {
         return skill.name === this.$store.state.activeCategory;
       });
     }
+  }
+
+
+  callApi() {
+    let user = hiscores.getPlayer({
+      name: "Gafroopa",
+      type: constants.playerTypes.normal
+    }).then((res:any ) => console.log(res)).catch((res: any) => console.log(res));
+    console.log(user);
   }
 
   updateSkillByXp(field: any, xp: Number) {
