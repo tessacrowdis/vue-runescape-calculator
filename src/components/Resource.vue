@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr v-show="members(resource.members)">
     <td>{{resource.level}}</td>
     <td>
       <img :src="resource.src">
@@ -37,6 +37,12 @@ export default class Resource extends Vue {
       (this.skill.targetXp - this.skill.playerXp) / this.resource.experience
     );
   }
+
+  members(isMembersOnly: Boolean) {
+      console.log('object is hitting')
+    if (!isMembersOnly) return true;
+    return this.$store.state.hideMembers !== isMembersOnly;
+  }
 }
 </script>
 
@@ -44,7 +50,7 @@ export default class Resource extends Vue {
 <style scoped lang="scss">
 input {
   background: rgba(255, 255, 255, 0);
-  width: 20%
+  width: 20%;
 }
 </style>
 

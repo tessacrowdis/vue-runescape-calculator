@@ -1,7 +1,8 @@
 <template>
   <div class="calculator">
+    <input type="checkbox" v-model="hideMembers">Hide Members?
     <div v-if="activeCategory === null">
-      <h3>Please select a category</h3>
+      <h3>Please select a category to begin!</h3>
     </div>
 
     <div v-else class="grid">
@@ -60,16 +61,28 @@ export default class Calculator extends Vue {
     }
   }
 
-  updateSkillByXp(field: any, xp: Number) {
-    let updatedSkill = this.skill;
-    updatedSkill[field] = xp;
-    this.$store.dispatch("updateFromXp", { updatedSkill, field });
+  get hideMembers() {
+    return this.$store.state.hideMembers;
+  }
+
+  set hideMembers(value: Boolean) {
+    this.$store.state.hideMembers = value;
   }
 
   updateSkillByLevel(field: any, level: Number) {
+    if (level > 120) level = 120;
+    if (level < 0) level = 1;
     let updatedSkill = this.skill;
     updatedSkill[field] = level;
     this.$store.dispatch("updateFromLevel", { updatedSkill, field });
+  }
+
+  updateSkillByXp(field: any, xp: Number) {
+    if (xp > 20000000) xp = 20000000;
+    if (xp < 0) xp = 0;
+    let updatedSkill = this.skill;
+    updatedSkill[field] = xp;
+    this.$store.dispatch("updateFromXp", { updatedSkill, field });
   }
 }
 </script>
