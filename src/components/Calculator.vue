@@ -1,12 +1,12 @@
 <template>
   <div class="calculator">
-    <div v-if="activeCategory === null">
+    <div v-if="activeSkill === null">
       <h3>Please select a category</h3>
     </div>
 
     <div v-else class="grid">
       <div class="column">
-        <label>Your {{ activeCategory }} level:</label>
+        <label>Your {{ activeSkill }} level:</label>
         <input
           v-model="skill.playerLevel"
           v-on:change="updateSkillByLevel('playerLevel', skill.playerLevel)"
@@ -14,7 +14,7 @@
         >
       </div>
       <div class="column">
-        <label>Your {{ activeCategory }} Xp:</label>
+        <label>Your {{ activeSkill }} Xp:</label>
         <input
           v-model="skill.playerXp"
           v-on:change="updateSkillByXp('playerXp', skill.playerXp)"
@@ -48,14 +48,14 @@ import "@/styles.scss";
 
 @Component
 export default class Calculator extends Vue {
-  get activeCategory() {
-    return this.$store.state.activeCategory;
+  get activeSkill() {
+    return this.$store.state.activeSkill;
   }
 
   get skill() {
-    if (this.$store.state.activeCategory) {
+    if (this.$store.state.activeSkill) {
       return this.$store.state.skills.find((skill: any) => {
-        return skill.name === this.$store.state.activeCategory;
+        return skill.name === this.$store.state.activeSkill;
       });
     }
   }

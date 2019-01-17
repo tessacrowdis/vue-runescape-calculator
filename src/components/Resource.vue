@@ -25,9 +25,9 @@ export default class Resource extends Vue {
   resource: any = this.resource;
 
   get skill() {
-    if (this.$store.state.activeCategory) {
+    if (this.$store.state.activeSkill) {
       return this.$store.state.skills.find((skill: any) => {
-        return skill.name === this.$store.state.activeCategory;
+        return skill.name === this.$store.state.activeSkill;
       });
     }
   }
@@ -44,7 +44,7 @@ export default class Resource extends Vue {
 <style scoped lang="scss">
 input {
   background: rgba(255, 255, 255, 0);
-  width: 20%
+  width: auto;
 }
 </style>
 

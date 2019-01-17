@@ -25,13 +25,13 @@ import Resource from "./Resource.vue";
 })
 export default class Resources extends Vue {
   get category() {
-    if (this.$store.state.activeCategory) {
-      let activeCategory = this.$store.state.categories.find(
+    if (this.$store.state.activeSkill) {
+      let activeSkill = this.$store.state.skillData.find(
         (category: any) => {
-          return category.name === this.$store.state.activeCategory;
+          return category.name === this.$store.state.activeSkill;
         }
       );
-      return activeCategory.resources;
+      return activeSkill.resources;
     }
   }
 }

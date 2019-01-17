@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import categories from './categories';
+import skillData from '@/skilldata';
 import leveltable from './leveltable';
-import skillcolors from './skillcolors';
+import skillColors from './skillcolors';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        activeCategory: null,
+        activeSkill: null,
         skills: [
             { name: 'Agility', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 },
             { name: 'Construction', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 },
@@ -25,19 +25,19 @@ export default new Vuex.Store({
             { name: 'Smithing', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 },
             { name: 'Woodcutting', playerLevel: 0, playerXp: 0, targetLevel: 0, targetXp: 0 }
         ],
-        skillcolors,
-        categories,
+        skillColors,
+        skillData,
         leveltable
     },
 
     mutations: {
-        changeActiveCategory(state, newCategory) {
-            state.activeCategory = newCategory;
+        changeActiveSkill(state, newCategory) {
+            state.activeSkill = newCategory;
         },
         updateSkill(state, updatedSkill) {
             let i = 0;
             for (let skill of state.skills) {
-                if (skill.name === state.activeCategory) {
+                if (skill.name === state.activeSkill) {
                     state.skills[i].playerLevel = updatedSkill.playerLevel;
                     state.skills[i].playerXp = updatedSkill.playerXp;
                     state.skills[i].targetLevel = updatedSkill.targetLevel;
@@ -54,7 +54,7 @@ export default new Vuex.Store({
                 if (entry.xp > payload.updatedSkill[payload.field]) { row = entry.level - 2; break; }
             }
             for (let skill of state.skills) {
-                if (skill.name === state.activeCategory) {
+                if (skill.name === state.activeSkill) {
                     if (payload.field.includes('player')) {
                         state.skills[i].playerLevel = leveltable[row].level;
                     } else {
@@ -72,7 +72,7 @@ export default new Vuex.Store({
                 if (entry.level == payload.updatedSkill[payload.field]) { row = entry.level - 1; break; }
             }
             for (let skill of state.skills) {
-                if (skill.name === state.activeCategory) {
+                if (skill.name === state.activeSkill) {
                     if (payload.field.includes('player')) {
                         state.skills[i].playerXp = leveltable[row].xp;
                     } else {

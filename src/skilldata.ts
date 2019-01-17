@@ -1,29 +1,29 @@
 export default [
-    {
-        name: "Agility",
-        src: "skill_icons/agility.png",
-        resources: []
-    },
-    {
-        name: "Construction",
-        src: "skill_icons/construction.png",
-        resources: []
-    },
-    {
-        name: "Cooking",
-        src: "skill_icons/cooking.png",
-        resources: []
-    },
-    {
-        name: "Crafting",
-        src: "skill_icons/crafting.png",
-        resources: []
-    },
-    {
-        name: "Farming",
-        src: "skill_icons/farming.png",
-        resources: []
-    },
+    // {
+    //     name: "Agility",
+    //     src: "skill_icons/agility.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Construction",
+    //     src: "skill_icons/construction.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Cooking",
+    //     src: "skill_icons/cooking.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Crafting",
+    //     src: "skill_icons/crafting.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Farming",
+    //     src: "skill_icons/farming.png",
+    //     resources: []
+    // },
     {
         name: "Firemaking",
         src: "skill_icons/firemaking.png",
@@ -70,6 +70,34 @@ export default [
                 experience: 135,
                 members: false
             },
+            {
+                name: "Mahogany logs",
+                src: "https://general-543f.kxcdn.com/items/mahogany_logs.png",
+                level: 55,
+                experience: 210,
+                members: true
+            },
+            {
+                name: "Yew logs",
+                src: "https://general-543f.kxcdn.com/items/yew_logs.png",
+                level: 65,
+                experience: 225,
+                members: true
+            },
+            {
+                name: "Magic logs",
+                src: "https://general-543f.kxcdn.com/items/magic_logs.png",
+                level: 80,
+                experience: 404.5,
+                members: true
+            },
+            {
+                name: "Redwood logs",
+                src: "https://general-543f.kxcdn.com/items/redwood_logs.png",
+                level: 95,
+                experience: 500,
+                members: true
+            },
 
         ]
     },
@@ -107,16 +135,16 @@ export default [
             }
         ]
     },
-    {
-        name: "Fletching",
-        src: "skill_icons/fletching.png",
-        resources: []
-    },
-    {
-        name: "Herblore",
-        src: "skill_icons/herblore.png",
-        resources: []
-    },
+    // {
+    //     name: "Fletching",
+    //     src: "skill_icons/fletching.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Herblore",
+    //     src: "skill_icons/herblore.png",
+    //     resources: []
+    // },
     {
         name: "Mining",
         src: "skill_icons/mining.png",
@@ -130,24 +158,24 @@ export default [
             }
         ]
     },
-    {
-        name: "Runecrafting",
-        src: "skill_icons/runecrafting.png",
-        resources: []
-    },
-    {
-        name: "Smithing",
-        src: "skill_icons/smithing.png",
-        resources: []
-    },
-    {
-        name: "Hunter",
-        src: "skill_icons/hunter.png",
-        resources: []
-    },
-    {
-        name: "Woodcutting",
-        src: "skill_icons/woodcutting.png",
-        resources: []
-    },
+    // {
+    //     name: "Runecrafting",
+    //     src: "skill_icons/runecrafting.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Smithing",
+    //     src: "skill_icons/smithing.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Hunter",
+    //     src: "skill_icons/hunter.png",
+    //     resources: []
+    // },
+    // {
+    //     name: "Woodcutting",
+    //     src: "skill_icons/woodcutting.png",
+    //     resources: []
+    // },
 ]
