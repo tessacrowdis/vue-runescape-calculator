@@ -43,6 +43,6 @@ table {
     padding: 2px;
     margin: auto;
     border: 1px solid black;
-
 }
+
 </style>
