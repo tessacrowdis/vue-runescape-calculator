@@ -152,21 +152,21 @@ export default [
         src: "https://general-543f.kxcdn.com/items/raw_cod.png",
         level: 23,
         experience: 45,
-        members: false
+        members: true
       },
       {
         name: "Raw pike",
         src: "https://general-543f.kxcdn.com/items/raw_pike.png",
         level: 25,
         experience: 60,
-        members: false
+        members: true
       },
       {
         name: "Raw slimy eel",
         src: "https://general-543f.kxcdn.com/items/raw_slimy_eel.png",
         level: 28,
         experience: 65,
-        members: false
+        members: true
       },
       {
         name: "Raw salmon",
@@ -187,14 +187,14 @@ export default [
         src: "https://general-543f.kxcdn.com/items/raw_rainbow_fish.png",
         level: 38,
         experience: 80,
-        members: false
+        members: true
       },
       {
         name: "Raw cave eel",
         src: "https://general-543f.kxcdn.com/items/raw_cave_eel.png",
         level: 38,
         experience: 80,
-        members: false
+        members: true
       },
       {
         name: "Raw lobster",
@@ -208,14 +208,14 @@ export default [
         src: "https://general-543f.kxcdn.com/items/raw_bass.png",
         level: 46,
         experience: 100,
-        members: false
+        members: true
       },
       {
         name: "Leaping trout",
         src: "https://general-543f.kxcdn.com/items/leaping_trout.png",
         level: 48,
         experience: 50,
-        members: false
+        members: true
       },
       {
         name: "Raw swordfish",
@@ -229,63 +229,63 @@ export default [
         src: "https://general-543f.kxcdn.com/items/leaping_salmon.png",
         level: 58,
         experience: 70,
-        members: false
+        members: true
       },
       {
         name: "Raw monkfish",
         src: "https://general-543f.kxcdn.com/items/raw_monkfish.png",
         level: 62,
         experience: 120,
-        members: false
+        members: true
       },
       {
         name: "Raw karambwan",
         src: "https://general-543f.kxcdn.com/items/raw_karambwan.png",
         level: 65,
         experience: 50,
-        members: false
+        members: true
       },
       {
         name: "Leaping sturgeon",
         src: "https://general-543f.kxcdn.com/items/leaping_sturgeon.png",
         level: 70,
         experience: 80,
-        members: false
+        members: true
       },
       {
         name: "Raw shark",
         src: "https://general-543f.kxcdn.com/items/raw_shark.png",
         level: 76,
         experience: 110,
-        members: false
+        members: true
       },
       {
         name: "Raw sea turtle",
         src: "https://general-543f.kxcdn.com/items/raw_sea_turtle.png",
         level: 79,
         experience: 38,
-        members: false
+        members: true
       },
       {
         name: "Raw manta ray",
         src: "https://general-543f.kxcdn.com/items/raw_manta_ray.png",
         level: 81,
         experience: 46,
-        members: false
+        members: true
       },
       {
         name: "Raw anglerfish",
         src: "https://general-543f.kxcdn.com/items/raw_anglerfish.png",
         level: 82,
         experience: 120,
-        members: false
+        members: true
       },
       {
         name: "Raw dark crab",
         src: "https://general-543f.kxcdn.com/items/raw_dark_crab.png",
         level: 85,
         experience: 120,
-        members: false
+        members: true
       }
     ]
   },
