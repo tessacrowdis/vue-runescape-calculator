@@ -1,16 +1,14 @@
 <template>
   <header>
     <div v-for="skill in skills" v-bind:key="skill.name">
-      <transition name="fade">
         <div
           class="skill"
           :class="{selected: isSelected(skill)}"
           :key="skill.id"
-          v-on:click="changeActiveCategory(skill.name)"
+        v-on:click="changeActiveSkill(skill.name)"
         >
           <img :src="require(`@/assets/${skill.src}`)">
         </div>
-      </transition>
     </div>
   </header>
 </template>
@@ -20,20 +18,21 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Header extends Vue {
-  get activeCategory() {
-    return this.$store.state.activeCategory;
-  }
-  get skills() {
-    return this.$store.state.categories;
+  get activeSkill() {
+    return this.$store.state.activeSkill;
   }
 
-  changeActiveCategory(name: String) {
-    this.$store.commit("changeActiveCategory", name);
+  get skills() {
+    return this.$store.state.skillData;
+  }
+
+  changeActiveSkill(name: String) {
+    this.$store.commit("changeActiveSkill", name);
   }
 
   isSelected(skill: any) {
     if (!this.$store.state.activeCategory) return false;
-    return skill.name === this.$store.state.activeCategory;
+    return skill.name === this.$store.state.activeSkill;
   }
 }
 </script>
@@ -59,13 +58,4 @@ header {
     }
   }
 }
-
-// .fade-enter-active .fade-leave-active {
-//     background-color: red
-// }
-
-// .fade-enter,
-// .fade-leave-to {
-//   opacity: 0;
-// }
 </style>
