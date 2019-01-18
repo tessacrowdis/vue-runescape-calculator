@@ -24,12 +24,12 @@ import "@/styles.scss";
 export default class Home extends Vue {
   get changeGradient() {
     let skillColor = "gray";
-    if (this.$store.state.activeCategory) {
-      skillColor = this.$store.state.skillcolors[
-        this.$store.state.activeCategory
+    if (this.$store.state.activeSkill) {
+      skillColor = this.$store.state.skillColors[
+        this.$store.state.activeSkill
       ];
     }
-    return `linear-gradient(to top, ${skillColor}, cornsilk 45%)`;
+    return `linear-gradient(to top, ${skillColor} 1%, black 95%)`;
   }
 }
 </script>
