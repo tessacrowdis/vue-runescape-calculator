@@ -42,9 +42,8 @@ export default class Resource extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
 tr {
-    height: 36px;
+  height: 36px;
 }
 
 input {

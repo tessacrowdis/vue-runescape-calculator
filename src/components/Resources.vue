@@ -26,11 +26,9 @@ import Resource from "./Resource.vue";
 export default class Resources extends Vue {
   get category() {
     if (this.$store.state.activeSkill) {
-      let activeSkill = this.$store.state.skillData.find(
-        (category: any) => {
-          return category.name === this.$store.state.activeSkill;
-        }
-      );
+      let activeSkill = this.$store.state.skillData.find((category: any) => {
+        return category.name === this.$store.state.activeSkill;
+      });
       return activeSkill.resources;
     }
   }
@@ -38,11 +36,9 @@ export default class Resources extends Vue {
 </script>
 
 <style scoped lang="scss">
-
 table {
-    padding: 2px;
-    margin: auto;
-    border: 1px solid black;
+  padding: 2px;
+  margin: auto;
+  border: 1px solid black;
 }
-
 </style>

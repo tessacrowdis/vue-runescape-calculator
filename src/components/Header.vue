@@ -1,10 +1,10 @@
 <template>
   <header>
-    <div v-for="skill in skills">
+    <div v-for="skill in skills" v-bind:key="skill.name">
       <div
         class="skill"
-        v-bind:key="skill.key"
-        v-bind:class="{selected: isSelected(skill)}"
+        :class="{selected: isSelected(skill)}"
+        :key="skill.id"
         v-on:click="changeActiveSkill(skill.name)"
       >
         <img :src="require(`@/assets/${skill.src}`)">
@@ -40,18 +40,19 @@ export default class Header extends Vue {
 header {
   max-width: 80%;
   margin: auto;
-  column-count: 3;
-  padding: 2vh 0;
+  column-count: 7;
+  padding: 2vh 0 1vh 0;
   .skill {
-    height: 36px;
+    height: 48px;
     display: flex;
     margin: auto;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     &.selected {
-      background-color: lightseagreen;
-      border: 1px solid;
+      transition: background-color 1s, border 3s;
+      background-color: limegreen;
+      border: 0.5px solid darkblue;
     }
   }
 }
