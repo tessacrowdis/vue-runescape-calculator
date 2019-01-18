@@ -1,14 +1,14 @@
 <template>
   <header>
     <div v-for="skill in skills" v-bind:key="skill.name">
-        <div
-          class="skill"
-          :class="{selected: isSelected(skill)}"
-          :key="skill.id"
+      <div
+        class="skill"
+        :class="{selected: isSelected(skill)}"
+        :key="skill.id"
         v-on:click="changeActiveSkill(skill.name)"
-        >
-          <img :src="require(`@/assets/${skill.src}`)">
-        </div>
+      >
+        <img :src="require(`@/assets/${skill.src}`)">
+      </div>
     </div>
   </header>
 </template>
@@ -31,7 +31,6 @@ export default class Header extends Vue {
   }
 
   isSelected(skill: any) {
-    if (!this.$store.state.activeCategory) return false;
     return skill.name === this.$store.state.activeSkill;
   }
 }
@@ -50,11 +49,10 @@ header {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 1s, border 3s;
     &.selected {
       transition: background-color 1s, border 3s;
       background-color: limegreen;
-      border: .5px solid darkblue;
+      border: 0.5px solid darkblue;
     }
   }
 }
