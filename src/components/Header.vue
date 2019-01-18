@@ -50,8 +50,8 @@ header {
     align-items: center;
     cursor: pointer;
     &.selected {
-      transition: background-color 1s, border 3s;
-      background-color: limegreen;
+      transition: background-color 2s, border 4s;
+      background-color: lightcoral;
       border: 0.5px solid darkblue;
     }
   }
