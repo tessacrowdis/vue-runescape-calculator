@@ -70,7 +70,7 @@ export default class Calculator extends Vue {
   }
 
   updateSkillByLevel(field: any, level: Number) {
-    if (level > 120) level = 120;
+    if (level > 126) level = 126;
     if (level < 0) level = 1;
     let updatedSkill = this.skill;
     updatedSkill[field] = level;
