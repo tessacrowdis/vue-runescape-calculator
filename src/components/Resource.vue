@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr v-show="members(resource.members)">
     <td :style="{ backgroundColor: isSkillElegible(resource.level) }">{{resource.level}}</td>
     <td>
       <img :src="resource.src">
@@ -42,6 +42,11 @@ export default class Resource extends Vue {
     if (requiredLevel > this.skill.playerLevel && requiredLevel <= this.skill.targetLevel) return '#f8ff42'; // Unlocked
     else if (requiredLevel <= this.skill.playerLevel) return '#86fc41'; // Will unlock on way to goal
     else return '#e51b1b'; // Requirement not met
+  }
+
+  members(isMembersOnly: Boolean) {
+    if (!isMembersOnly) return true;
+    return this.$store.state.hideMembers !== isMembersOnly;
   }
 }
 </script>
