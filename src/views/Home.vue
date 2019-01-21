@@ -1,5 +1,5 @@
 <template>
-  <div class="gradient" v-bind:style="{background: changeGradient}">
+  <div class="gradient" v-bind:style="{backgroundColor: changeBackgroundColor}">
     <div class="home">
       <Header/>
       <Calculator/>
@@ -22,29 +22,26 @@ import "@/styles.scss";
   }
 })
 export default class Home extends Vue {
-  get changeGradient() {
-    let skillColor = "gray";
-    if (this.$store.state.activeCategory) {
-      skillColor = this.$store.state.skillcolors[
-        this.$store.state.activeCategory
-      ];
-    }
-    return `linear-gradient(to top, ${skillColor}, cornsilk 45%)`;
+  get changeBackgroundColor() {
+    let activeSkill = this.$store.state.activeCategory;
+    return activeSkill ? this.$store.state.skillcolors[activeSkill] : 'gray';
   }
 }
 </script>
 
 <style scoped type="sass">
 .home {
-  height: 100vh;
+  min-height: 100vh;
   width: 95%;
   max-width: 550px;
   margin: auto;
   border-left: 2px solid;
   border-right: 2px solid;
   background-color: cornsilk;
+  padding: 25px 0 50px 0;
 }
 .gradient {
-  transition: all 1s;
+  transition: all 1.5s;
+  background: linear-gradient(.25turn, rgba(0,0,0,0), cornsilk, cornsilk, rgba(0,0,0,0));
 }
 </style>

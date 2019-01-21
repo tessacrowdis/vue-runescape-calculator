@@ -25,24 +25,20 @@ import Resource from "./Resource.vue";
 })
 export default class Resources extends Vue {
   get category() {
-    if (this.$store.state.activeCategory) {
-      let activeCategory = this.$store.state.categories.find(
-        (category: any) => {
-          return category.name === this.$store.state.activeCategory;
-        }
-      );
-      return activeCategory.resources;
+    if (this.$store.state.activeSkill) {
+      let activeSkill = this.$store.state.skillData.find((category: any) => {
+        return category.name === this.$store.state.activeSkill;
+      });
+      return activeSkill.resources;
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-
 table {
-    padding: 2px;
-    margin: auto;
-    border: 1px solid black;
-
+  padding: 2px;
+  margin: auto;
+  border: 1px solid black;
 }
 </style>
