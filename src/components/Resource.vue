@@ -52,9 +52,6 @@ tr {
   height: 36px;
 }
 
-td {
-}
-
 input {
   background: rgba(255, 255, 255, 0);
   width: auto;
