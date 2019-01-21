@@ -5,7 +5,7 @@ This is a very basic skill calculator for [OldSchool Runescape](https://oldschoo
 
 ## Project setup
 
-Inside the directory you
+Inside the directory you cloned or downloaded the zip:
 ```
 1. npm install
 2. npm run serve
