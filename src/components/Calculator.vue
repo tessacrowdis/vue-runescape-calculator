@@ -71,7 +71,7 @@ export default class Calculator extends Vue {
 
   updateSkillByLevel(field: any, level: Number) {
     if (level > 126) level = 126;
-    if (level < 0) level = 1;
+    if (level < 1) level = 1;
     let updatedSkill = this.skill;
     updatedSkill[field] = level;
     this.$store.dispatch("updateFromLevel", { updatedSkill, field });
