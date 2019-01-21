@@ -10,6 +10,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         activeSkill: null,
+        hideMembers: false,
         skills,
         skillColors,
         skillData,
@@ -42,17 +43,16 @@ export default new Vuex.Store({
             for (let skill of state.skills) {
                 if (skill.name === state.activeSkill) {
                     if (payload.field.includes('player')) {
-                        state.skills[i].playerLevel = leveltable[row].level;
-                        // TODO: Look into incorrect calculation
+                        state.skills[i].playerLevel = levelTable[row].level;
                         if (state.skills[i].targetXp <= state.skills[i].playerXp) {
-                            state.skills[i].targetLevel = leveltable[row + 1].level;
-                            state.skills[i].targetXp = leveltable[row + 1].xp;
+                            state.skills[i].targetLevel = levelTable[row + 1].level;
+                            state.skills[i].targetXp = levelTable[row + 1].xp;
                         }
                     } else {
-                        state.skills[i].targetLevel = leveltable[row].level;
+                        state.skills[i].targetLevel = levelTable[row].level;
                         if (state.skills[i].targetXp <= state.skills[i].playerXp) {
-                            state.skills[i].playerLevel = leveltable[row - 1].level;
-                            state.skills[i].playerXp = leveltable[row - 1].xp;
+                            state.skills[i].playerLevel = levelTable[row - 1].level;
+                            state.skills[i].playerXp = levelTable[row - 1].xp;
                         }
                     }
                     break;
@@ -69,17 +69,17 @@ export default new Vuex.Store({
             for (let skill of state.skills) {
                 if (skill.name === state.activeSkill) {
                     if (payload.field.includes('player')) {
-                        state.skills[i].playerXp = leveltable[row].xp;
+                        state.skills[i].playerXp = levelTable[row].xp;
                         // TODO: Look into incorrect calculation
                         if (state.skills[i].targetLevel <= state.skills[i].playerLevel) {
-                            state.skills[i].targetLevel = leveltable[row + 1].level;
-                            state.skills[i].targetXp = leveltable[row + 1].xp;
+                            state.skills[i].targetLevel = levelTable[row + 1].level;
+                            state.skills[i].targetXp = levelTable[row + 1].xp;
                         }
                     } else {
-                        state.skills[i].targetXp = leveltable[row].xp;
+                        state.skills[i].targetXp = levelTable[row].xp;
                         if (state.skills[i].targetLevel <= state.skills[i].playerLevel) {
-                            state.skills[i].playerLevel = leveltable[row - 1].level;
-                            state.skills[i].playerXp = leveltable[row - 1].xp;
+                            state.skills[i].playerLevel = levelTable[row - 1].level;
+                            state.skills[i].playerXp = levelTable[row - 1].xp;
                         }
                     }
                     break;

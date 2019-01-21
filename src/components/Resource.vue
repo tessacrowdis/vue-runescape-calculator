@@ -39,7 +39,6 @@ export default class Resource extends Vue {
   }
 
   members(isMembersOnly: Boolean) {
-      console.log('object is hitting')
     if (!isMembersOnly) return true;
     return this.$store.state.hideMembers !== isMembersOnly;
   }
