@@ -1,6 +1,6 @@
 <template>
   <tr v-show="members(resource.members)">
-    <td>{{resource.level}}</td>
+    <td :style="{ backgroundColor: isSkillElegible(resource.level) }">{{resource.level}}</td>
     <td>
       <img :src="resource.src">
       {{resource.name}}
@@ -36,6 +36,12 @@ export default class Resource extends Vue {
     return Math.ceil(
       (this.skill.targetXp - this.skill.playerXp) / this.resource.experience
     );
+  }
+
+  isSkillElegible(requiredLevel: number) {
+    if (requiredLevel > this.skill.playerLevel && requiredLevel <= this.skill.targetLevel) return '#f8ff42'; // Unlocked
+    else if (requiredLevel <= this.skill.playerLevel) return '#86fc41'; // Will unlock on way to goal
+    else return '#e51b1b'; // Requirement not met
   }
 
   members(isMembersOnly: Boolean) {
