@@ -1,7 +1,7 @@
 <template>
-  <tr v-show="members(resource.members)">
+  <tr v-if="members(resource.members)">
     <td :style="{ backgroundColor: isSkillElegible(resource.level) }">{{resource.level}}</td>
-    <td>
+    <td class="resource">
       <img :src="resource.src">
       {{resource.name}}
       <img v-if="resource.members" src="../assets/members_star.gif">
@@ -57,9 +57,18 @@ tr {
   height: 36px;
 }
 
+.resource {
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+
+img {
+    vertical-align: middle;
+}
+
 input {
-  background: rgba(255, 255, 255, 0);
-  width: auto;
+//   background: rgba(255, 255, 255, 0);
+  width: 70%
 }
 </style>
 

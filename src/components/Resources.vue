@@ -37,8 +37,14 @@ export default class Resources extends Vue {
 
 <style scoped lang="scss">
 table {
+  width: 95%;
   padding: 2px;
   margin: auto;
   border: 1px solid black;
+  tbody {
+    tr:nth-child(odd) {
+      background-color: rgba(0,0,0,0.2);
+    }
+  }
 }
 </style>
