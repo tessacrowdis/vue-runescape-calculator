@@ -23,8 +23,8 @@ import "@/styles.scss";
 })
 export default class Home extends Vue {
   get changeBackgroundColor() {
-    let activeSkill = this.$store.state.activeCategory;
-    return activeSkill ? this.$store.state.skillcolors[activeSkill] : 'gray';
+    let activeSkill = this.$store.state.activeSkill;
+    return activeSkill ? this.$store.state.skillColors[activeSkill] : 'gray';
   }
 }
 </script>
