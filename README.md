@@ -1,6 +1,6 @@
 # vue-runescape-calculator
 
-This is a very basic skill calculator for [OldSchool Runescape](https://oldschool.runescape.com/). I created this project to get a grasp on starting Vue and believe it can also be a useful tool to others who are beginner programs and need code to reference.
+This is a primitive skill calculator for [OldSchool Runescape](https://oldschool.runescape.com/). I created this project to get a grasp on starting Vue and believe it can also be a useful tool to others who are beginner programs and need code to reference.
 
 
 ## Project setup
